@@ -1,4 +1,4 @@
-import torch
+import torch #Biblioteca para construir y entrenar modelos de aprendizaje profundo.
 from dataset import cargar_y_procesar_dataset
 from series_temporales import crear_ventanas_temporales
 from autoencoder import Autoencoder, entrenar_autoencoder, calcular_errores
@@ -16,9 +16,9 @@ window_size = 10
 sequences = crear_ventanas_temporales(df_scaled, window_size)
 
 # 3. Configurar y entrenar el autoencoder
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Usando {'GPU' if torch.cuda.is_available() else 'CPU'}")
-input_size = sequences.shape[2]
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") #Detecta si hay GPU disponible y la selecciona en caso de haberlo.
+print(f"Usando {'GPU' if torch.cuda.is_available() else 'CPU'}") #Imprime el dispositivo que se va a utilizar.
+input_size = sequences.shape[2] #numero de características (columnas) en cada ventana.
 model = Autoencoder(input_size)
 model = entrenar_autoencoder(model, sequences, device)
 
