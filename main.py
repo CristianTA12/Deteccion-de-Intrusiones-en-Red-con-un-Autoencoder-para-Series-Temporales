@@ -6,7 +6,7 @@ from visualizacion import visualizar_anomalias
 import numpy as np
 
 # Ruta del dataset
-ruta = 'C:\\Proyecto\\dataset\\csv\\GeneratedLabelledFlows\\TrafficLabelling\\Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv'
+ruta = 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv'
 
 # 1. Cargar y procesar el dataset
 df_scaled = cargar_y_procesar_dataset(ruta)
