@@ -33,3 +33,5 @@ Notas de v1.5:
 -Se añade funcionalidad a main.py y cargar_modelo.py para dividir los datos en: datos de entrenamiento, datos de validación y datos de prueba.
 
 -Asimismo al ejecutar el programa obtenemos información nueva como: Pérdida de validación y pérdida de prueba.
+
+-Los porcentajes para entrenamiento, validación y prueba son los siguientes: 60% entrenamiento, 20% valdiación, 20% pruebas.
