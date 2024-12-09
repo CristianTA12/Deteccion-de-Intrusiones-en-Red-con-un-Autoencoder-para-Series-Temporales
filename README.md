@@ -20,7 +20,12 @@ En caso de tener el .pt del modelo, no necesitaremos entrenarlo, por lo tanto no
 
 Notas de v1:
 -Comentarios descriptivos de líneas de código.
+
 -Ruta absoluta cambiada a ruta relativa para la correcta ejecución sin necesidad de cambiar código.
+
 -Se incluye el archivo .csv del dataset utilizado.
+
 -El entrenamiento ahora guarda el modelo para su utilización mas adelante.
+
 -Se incluye el modelo entrenado.
+
