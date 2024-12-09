@@ -18,6 +18,7 @@ Las anomalías detectadas se visualizan utilizando un gráfico de calor.
 El programa completo se ejecuta desde main.py incluyendo el entrenamiento y exportación del modelo.
 En caso de tener el .pt del modelo, no necesitaremos entrenarlo, por lo tanto no será necesario ejecutar main.py y en su lugar deberemos ejecutar cargar_modelo.py, dicho archivo se encargará de cargar y procesar el dataset, cargará el modelo, detectará las anomalías y nos las mostrará en un gráfico de calor.
 
+
 Notas de v1:
 -Comentarios descriptivos de líneas de código.
 
