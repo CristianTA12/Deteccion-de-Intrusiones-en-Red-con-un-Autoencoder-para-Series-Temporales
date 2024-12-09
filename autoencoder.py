@@ -45,7 +45,18 @@ def entrenar_autoencoder(model, sequences, device, epochs=10, lr=0.0001): #Model
             optimizer.step() #Actualiza los pesos.
             total_loss += loss.item() #Acumula la pérdida total.
         print(f"Epoch {epoch + 1}, Loss: {total_loss / len(sequences_tensor):.6f}") #Imprime la pérdida promedio al final de cada epoch.
-    
+    path = 'modelo.pt'
+    try:
+        torch.save(model.state_dict(), path)
+        print("Modelo guardado exitosamente en:", path)
+
+        # Intentar cargar el modelo para verificar
+        modelo_cargado = Autoencoder(input_size=sequences_tensor.shape[1])
+        modelo_cargado.load_state_dict(torch.load(path))
+        modelo_cargado.eval()
+        print("El modelo se guardó y cargó correctamente.")
+    except Exception as e:
+        print(f"Error al guardar o cargar el modelo: {e}")
     return model #Retorna el modelo entrenado.
 
 
