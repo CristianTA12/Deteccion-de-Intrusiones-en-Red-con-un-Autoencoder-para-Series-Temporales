@@ -1,4 +1,4 @@
-Este proyecto se crea con el objetivo de detectar intrusiones en red a partir del entrenamiento de un modelo a través de un autoencoder. Este proyecto se divide en las siguientes fases:
+El objetivo de este proyecto es la detección de intrusiones en red a partir del entrenamiento de un modelo a través de un autoencoder. Este proyecto se divide en las siguientes fases:
 
 1. Cargar y Procesar el Dataset
 El dataset es cargado, se procesan y limpian las columnas, y se codifican las variables categóricas.
@@ -22,3 +22,4 @@ Notas de v1:
 -Comentarios descriptivos de líneas de código.
 -Ruta absoluta cambiada a ruta relativa para la correcta ejecución sin necesidad de cambiar código.
 -Se incluye el archivo .csv del dataset utilizado.
+-El entrenamiento ahora guarda el modelo para su utilización mas adelante.
