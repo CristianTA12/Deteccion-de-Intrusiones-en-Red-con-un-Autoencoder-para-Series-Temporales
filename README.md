@@ -16,6 +16,10 @@ Se calculan los errores de reconstrucción para identificar secuencias anómalas
 Las anomalías detectadas se visualizan utilizando un gráfico de calor.
 
 El programa completo se ejecuta desde main.py incluyendo el entrenamiento y exportación del modelo.
+Esto recorrerá todos los pasos anteriormente mencionados: 
+Carga el dataset, que es el achivo .csv que podemos encontrar adjunto en este repositorio, con el nombre de Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv y le aplicará un eliminado de espacios en blanco, codificación de variables categóricas, reemplazará valores infinitos y nulos y escalará los datos.
+Después crearemos ventanas temporales para dividir los datos en segmentos y así facilitar el aprendizaje del modelo.
+El siguiente paso que va a seguir el programa es el de definir el autoencoder y entrenarlo, esta es la parte del proceso mas larga y es por ello que una vez tenemos el modelo entrenado, lo guardaremos y mas adelante si debemos ejecutar el programa nuevaamente lo haremos desde cargar_modelo.py. La última parte que se va a ejecutar en nuestro código es la de visualización mediante openCV de las anomalías que nuestro modelo ha sido capaz de encontrar.
 En caso de tener el .pt del modelo, no necesitaremos entrenarlo, por lo tanto no será necesario ejecutar main.py y en su lugar deberemos ejecutar cargar_modelo.py, dicho archivo se encargará de cargar y procesar el dataset, cargará el modelo, detectará las anomalías y nos las mostrará en un gráfico de calor.
 
 
