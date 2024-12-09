@@ -16,6 +16,16 @@ def visualizar_anomalias(sequences, model, anomalies, device): #sequences: conju
 
         # Crear un gráfico de calor para el error
         heatmap = cv2.applyColorMap((error * 255 / error.max()).astype(np.uint8), cv2.COLORMAP_JET)
+
+        # Suavizar el heatmap
+        heatmap = cv2.GaussianBlur(heatmap, (5, 5), 0)
+
+        # Escalar la imagen si es pequeña
+        heatmap = cv2.resize(heatmap, (1200, 1000), interpolation=cv2.INTER_LINEAR)
+
+        # Configurar ventana
+        cv2.namedWindow(f"Anomalia {idx}", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow(f"Anomalia {idx}", 1200, 1000)  # Tamaño ajustable inicial
         
         # Mostrar la imagen con OpenCV
         cv2.imshow(f"Anomalia {idx}", heatmap) #Muestra la imagen del gráfico de calor en una ventana tutilada "Anomalia {idx}".
